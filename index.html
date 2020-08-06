@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel= "stylesheet" href= "style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>MEMORY GAME</title>
+</head>
+<body>
+    <div class="heading"> <p> <h4> MEMORY CARDS GAME</h4></p></div>
+    <div class="gameplay">
+        <div class="first-row">
+            <div id="card1"class="card">
+                <img id="frontId" class="front" src="cardback.jpg" alt="card 1">
+            </div>
+            <div id="card2" class="card">
+                <img id="frontId" class="front" src="cardback.jpg" alt="card 2">
+                <img id="backId" class="back" src="apple.png" alt="card 2">
+            </div>
+            <div id="card3" class="card">
+                <img id="frontId" class="front" src="cardback.jpg" alt="card 3">
+                <img id="backId" class="back" src="pear.jpeg" alt="card 3">
+            </div>
+            <div id="card4" class="card">
+                <img id="frontId" class="front" src="cardback.jpg" alt="card 4">
+                <img id="backId" class="back" src="pear.jpeg" alt="card 4">
+            </div>
+        </div>
+        <div class="second-row">
+                <div id="card5" class="card">
+                    <img id="frontId" class="front" src="cardback.jpg" alt="card 5">
+                    <img id="backId" class="back" src="banana.jpeg" alt="card 5">
+                </div>
+                <div id="card6" class="card">
+                    <img id="frontId" class="front" src="cardback.jpg" alt="card 6">
+                    <img id="backId" class="back" src="banana.jpeg" alt="card 6">
+                </div>
+                <div id="card7" class="card">
+                    <img id="frontId" class="front" src="cardback.jpg" alt="card 7">
+                    <img id="backId" class="back" src="orange.jpeg" alt="card 7">
+                </div>
+                <div id="card8" class="card">
+                    <img id="frontId" class="front" src="cardback.jpg" alt="card 8">
+                    <img id="backId" class="back" src="orange.jpeg" alt="card 8">
+                </div>
+        </div> 
+        <div class="third-row">
+            <div id="card9" class="card">
+                <img id="frontId" class="front" src="cardback.jpg" alt="card 9">
+                <img id="backId" class="back" src="grapes.jpeg" alt="card 9">
+            </div>
+            <div id="card10" class="card">
+                <img id="frontId" class="front" src="cardback.jpg" alt="card 10">
+                <img id="backId" class="back" src="grapes.jpeg" alt="card 10">
+            </div>
+            <div id="card11" class="card">
+                <img id="frontId" class="front" src="cardback.jpg" alt="card 11">
+                <img id="backId" class="back" src="pineapple.jpeg" alt="card 11">
+            </div>
+            <div id="card12" class="card">
+                <img id="frontId" class="front" src="cardback.jpg" alt="card 12">
+                <img id="backId" class="back" src="pineapple.jpeg" alt="card 12">
+            </div>
+        </div> 
+    </div>
+    <div class="btn">
+        <button id="btn-id" class="btn-click"> Restart</button>
+    </div>
+
+    <div class="instruction-card">
+        <p><h5> Instructions:</h5> <br> 
+            <ul>
+                <li> Pay close attention to the cards when they are revealed</li>
+                <li> Click on the card that matches the image prompt</li>
+                <li> 3 correct clicks and you win</li>
+            </ul>
+        </p>
+    </div>
+
+    <div id="prompter" class="prompter" style="display: none;">
+        <img class="prompt" src="pineapple.jpeg" alt="prompt">
+    </div>
+
+    <div id="flash-card"  class="flash-card" style="display: none;">
+    
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
