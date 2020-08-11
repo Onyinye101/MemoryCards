@@ -15,7 +15,9 @@ body{
     padding: 10px 0px 0px 0px;
     text-align: center;
     font-size: 54px;
+    font-family: 'Lato', sans-serif;
     color: #ba2032;
+    text-shadow: 0px 2px 3px #555;
 } 
 .gameplay{
     display: grid;
@@ -80,12 +82,14 @@ body{
     list-style-position: inside;
     margin: 0;
     position: absolute;
-    margin-top: 160px;
+    margin-top: 200px;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     border: 2px solid #ba2032;
     padding: 10px;
+    box-shadow: 0px 2px 5px #555;
+    border-radius: 10px;
 
 }
 
@@ -103,13 +107,21 @@ body{
 }
 
 .flash-card{
-    margin: 0;
     position: absolute;
     margin-top: 20px;
-    left: 65%;
+    left: 55%;
     transform: translate(80%, -220%);
-    margin-right: -55%;
     border: 3px solid #ba2032;
+    border-radius: 15px;
     padding: 10px;
-    float: right;
+}
+
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
 }

@@ -1,8 +1,9 @@
 let allCards = [ "card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8","card9", "card10", "card11","card12"]
 let allFunctions = [cardOneClicked, cardTwoClicked, cardThreeClicked, cardFourClicked, cardFiveClicked, cardSixClicked, cardSevenClicked, cardEightClicked, cardNineClicked, cardTenClicked,cardElevenClicked, cardTwelveClicked]
-var  array = []
+var  array = [];
 let randomImage = "";
 let clickedCards = [];
+let score = 0;
 
 
 document.getElementById("btn-id").addEventListener("click", shuffleCards);
@@ -18,7 +19,7 @@ function shuffleCards() {
         document.getElementById(allCards[i]).getElementsByTagName('img')[0].src = array[i] 
     }
     console.log(array);
-    setTimeout(flipCards, 3000)
+    setTimeout(flipCards, 5000)
 }
 function flipCards() {
     for (i = 0; i < allCards.length; i++) {
@@ -51,12 +52,15 @@ function playCard (playedCard) {
     console.log(clickedCards + ' ' + randomImage);
     if (clickedCards.length === 2) {
         if (clickedCards[0]=== randomImage && clickedCards[1]=== randomImage) {
-            document.getElementById("flash-card").innerHTML = "Congratulations! You have won this round";
+            score += 1000;
+            document.getElementById("flash-card").innerHTML = `<p> Congratulations! You have won this round. Your score is: ${score} </p>`;
             document.getElementById("flash-card").style.display = "block";
         }
         else {
-            document.getElementById("flash-card").innerHTML = "Sorry! Try again";
+            const currentTopScore = score
+            document.getElementById("flash-card").innerHTML = `<p> Sorry! Try again. Your top score was: ${currentTopScore} </p>`;
             document.getElementById("flash-card").style.display = "block";
+            score = 0;
         }
     }
     else if (clickedCards.length > 2){
@@ -125,4 +129,3 @@ function cardTwelveClicked() {
     frontImg.src = array[11];
     playCard(array[11]);
 }
-
