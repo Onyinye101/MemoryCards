@@ -61,6 +61,7 @@ function playCard (playedCard) {
             document.getElementById("flash-card").innerHTML = `<p> Sorry! Try again. Your top score was: ${currentTopScore} </p>`;
             document.getElementById("flash-card").style.display = "block";
             score = 0;
+            setTimeout(shuffleCards, 1000);
         }
     }
     else if (clickedCards.length > 2){
