@@ -8,11 +8,13 @@ body{
     margin: Opx;
     font-family: 'Lato', sans-serif;
     height: 100vh;
+    background-image: url("backgroundimage.jpg") ;
 }
 
 .heading { 
     margin: auto;
     padding: 10px 0px 0px 0px;
+    background-color: lightgray;
     text-align: center;
     font-size: 54px;
     font-family: 'Lato', sans-serif;
@@ -107,7 +109,7 @@ body{
 }
 
 .flash-card{
-    position: absolute;
+    position: fixed;
     margin-top: 20px;
     left: 55%;
     transform: translate(80%, -220%);

@@ -19,7 +19,7 @@ function shuffleCards() {
         document.getElementById(allCards[i]).getElementsByTagName('img')[0].src = array[i] 
     }
     console.log(array);
-    setTimeout(flipCards, 5000)
+    setTimeout(flipCards, 3000);
 }
 function flipCards() {
     for (i = 0; i < allCards.length; i++) {
@@ -53,7 +53,7 @@ function playCard (playedCard) {
     if (clickedCards.length === 2) {
         if (clickedCards[0]=== randomImage && clickedCards[1]=== randomImage) {
             score += 1000;
-            document.getElementById("flash-card").innerHTML = `<p> Congratulations! You have won this round. Your score is: ${score} </p>`;
+            document.getElementById("flash-card").innerHTML = `<p> Congratulations! You have won this round. <br> Your score is: ${score} </p>`;
             document.getElementById("flash-card").style.display = "block";
         }
         else {
